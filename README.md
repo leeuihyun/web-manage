@@ -22,13 +22,14 @@
 + ### 22/01/24
     + 기본적인 node.js를 이용한 server
 
-        + 1. root폴더의 package.json 입력
-        + 2. terminal > npm install -g nodemon
-        + 3. terminal > npm i nodemon body-parser express
-        + 4. gitignore 파일 root 폴더에도 넣기
-        + 5. package.json에서 server.js를 이용하기로 했기 때문에 server.js 작성
+        +  root폴더의 package.json 입력
+        +  terminal > npm install -g nodemon
+        +  terminal > npm i nodemon body-parser express
+        +  gitignore 파일 root 폴더에도 넣기
+        +  package.json에서 server.js를 이용하기로 했기 때문에 server.js 작성
             
             ```java script
+            
                 const express = require('express');
                 const bodyParser = require('body-parser');
                 const app = express();
@@ -44,4 +45,20 @@
                 app.listen(port, ()=>console.log(`Listening on Port ${port}`));
             ```
             
+        + proxy 이용 , terminal > npm install -g http-proxy-middleware
+        + <setupProxy.js>
+        ```java script
+
+        const {createProxyMiddleware} = require('http-proxy-middleware');
+        module.exports = function(app){
+            app.use(
+                '/api',
+                createProxyMiddleware({
+                    target:'http://localhost:5000',
+                    changeOrigin : true,
+                })
+            );
+        };
+
+        ```
 -----------------------
