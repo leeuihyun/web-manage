@@ -29,7 +29,7 @@
         +  package.json에서 server.js를 이용하기로 했기 때문에 server.js 작성
             
             ```java script
-            
+
                 const express = require('express');
                 const bodyParser = require('body-parser');
                 const app = express();
@@ -61,4 +61,19 @@
         };
 
         ```
+-----------------------
+
++ ### 22/01/26
+    + React 라이프사이클
+        1. comstructor() 를 불러온다
+        2. componentWillMount() //컴포넌트가 마운트 되기전에 함수 불러와짐
+        3. render() // 컴포넌트를 그린다
+        4. componentDidMount() 
+
+        + props or state 가 변경되는 경우는ㄴ shouldComponentUpdate() 가 호출되어 render() 가 호출된다.
+        + 따라서 React에서는 상태 변경유지보수만으로 뷰를 재구성이 가능하다.
+
+    + @material-ui/core/CircularProgress 
+        + 이것을 이용하여 서버에서 들고온 데이터의 양이 많거나 로딩이 지연되고 있을 때 프로그래스바를 보여준다.
+
 -----------------------
