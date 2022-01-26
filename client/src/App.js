@@ -33,7 +33,7 @@ class App extends Component {
     })
   }
   componentDidMount(){
-    this.timer = setInterval(this.progress,100);
+    this.timer = setInterval(this.progress,20);
     this.callApi()
       .then(res=>this.setState({
         customers : res
@@ -78,7 +78,7 @@ class App extends Component {
               })
             ) : (
               <TableRow>
-                <TableCell colspan="6" align="center">
+                <TableCell colSpan="6" align="center">
                   <CircularProgress
                     className={classes.progress}
                     variant="indeterminate"

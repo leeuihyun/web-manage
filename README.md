@@ -70,10 +70,16 @@
         * render() // 컴포넌트를 그린다
         * componentDidMount() 
 
-        + props or state 가 변경되는 경우는ㄴ shouldComponentUpdate() 가 호출되어 render() 가 호출된다.
-        + 따라서 React에서는 상태 변경유지보수만으로 뷰를 재구성이 가능하다.
+
+        +  props or state 가 변경되는 경우는 shouldComponentUpdate() 가 호출되어 render() 가 호출된다.
+        +  따라서 React에서는 상태 변경유지보수만으로 뷰를 재구성이 가능하다.
 
     + @material-ui/core/CircularProgress 
         + 이것을 이용하여 서버에서 들고온 데이터의 양이 많거나 로딩이 지연되고 있을 때 프로그래스바를 보여준다.
 
 -----------------------
+
++ ### 22/01/26
+    + mysql을 이용한 서버 연동, 오류가나서 계속 찾아보며 변경을 계속 했는데 초기화해줘야함 . 우선 mongodb를 빠르게 공부하고 mongodb로 대체해서 변경할 예정
+
+-----------------------    
